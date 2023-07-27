@@ -14,22 +14,6 @@ This sample project uses a sample machine learning project to showcase how we ca
 
 ## Configuration
 
-### Source Repo
-
-#### Option 1: Use GitHub Repo
-
-1. Fork this repo in your GitHub account
-1. [Create a GitHub connection using the CodePipeline console](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html) to provide CodePipeline with access to your Github repositories *(See session Create a connection to GitHub (CLI))* 
-1. Update the GitHub related configuration in the `./configuration/projectConfig.json` file
-    * Set the value of *repoType* to *git*
-    * Update the value of *githubConnectionArn*, *githubRepoOwner* and *githubRepoName*
-
-#### Option 2: Create a CodeCommit Repo in your AWS account
-
-Alternatively, the CDK Infrastructure code can provision a CodeCommit Repo as Source Repo for you. 
-
-To switch to this option, set the value of *repoType* to *codecommit* in the `./configuration/projectConfig.json` file.
- 
 ### IP Permit List
 
 Please note that for simplicity, the API endpoint for the online model consumers is not protected by any authentication process. By default, it can be accessed by anyone from the internet. Please update the value of *ipPermitList* in the `./configuration/projectConfig.json` to include only the CIDR block of your network. 
@@ -165,9 +149,6 @@ Refer to the [README file](./consumers/online/README.md) for more details and in
 
 ## License
 This project is licensed under the [MIT-0](./LISENSE).
-
-## Contributing
-Refer to [CONTRIBUTING](./CONTRIBUTING) for more details on how to contribute to this project.
 
 ## References
 
